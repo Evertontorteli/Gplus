@@ -118,16 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>366, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSalvarConfigBanco.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSalvarConfigBanco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAghJREFUWEftl+1xwjAMhhmhI3SEjsAIbFA26QhlA9iAERiBERiBEdL3SSSjxnFi
+        EgAACxIB0t1+/AAAAghJREFUWEftl+1xwjAMhhmhI3SEjsAIbFA26QhlA9iAERiBERiBEdL3SSSjxnFi
         h971R/vc6Rr0admx427+aaHruq3kU3KV3CUOzxcJtq25/xxKupfcJLXgu7fw9SjJq4Rup6AItvFsRPB5
         tXRtKHAnGSdmmpmNF3NLSMdgseETIcfO3OogoA99QCfVa4uvxUTqBiFHOomdnyRZx0sQIzmTwCDn8nLI
         KY78bOrVKAcNOFdTTyMH1tBhIM2dOx7LX8vllHeHjNFx9X5W7LuEXP2Uk0vi3HqnMTJEp4upm1EsxZ00
