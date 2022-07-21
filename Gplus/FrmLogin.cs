@@ -70,7 +70,7 @@ namespace Gplus
 
             //AQUI VAI O CÓDIGO PARA O LOGIN
 
-           Form1 form = new Form1();
+           FrmInicio form = new FrmInicio();
 
             //Fecha a tela de login e abre o de Menu
             this.Hide();

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Gplus
 {
-    public partial class Form1 : Form
+    public partial class FrmInicio : Form
     {
         Banco banco10 = new Banco();
         Cliente cliente1 = new Cliente();
@@ -13,7 +13,7 @@ namespace Gplus
         Cliente cliente2 = new Cliente();
 
 
-        public Form1()
+        public FrmInicio()
         {
             InitializeComponent();
         }

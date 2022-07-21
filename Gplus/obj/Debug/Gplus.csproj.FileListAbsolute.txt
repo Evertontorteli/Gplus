@@ -1,5 +1,3 @@
-C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.ChildForm.resources
-C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.Form1.resources
 C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.Properties.Resources.resources
 C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.csproj.GenerateResource.cache
 C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.exe.licenses
@@ -124,3 +122,5 @@ C:\Users\adria\source\repos\Gplus\Gplus\obj\Debug\Gplus.csproj.CopyComplete
 C:\Users\adria\source\repos\Gplus\Gplus\obj\Debug\Gplus.exe
 C:\Users\adria\source\repos\Gplus\Gplus\obj\Debug\Gplus.pdb
 C:\Users\adria\source\repos\Gplus\Gplus\obj\Debug\Gplus.Controles.ConfigurarBanco.resources
+C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.Controles.ucConfigurarBanco.resources
+C:\Users\Everton Torteli\source\repos\Gplus-main\Gplus-main\Gplus\obj\Debug\Gplus.FrmInicio.resources

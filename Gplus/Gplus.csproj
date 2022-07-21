@@ -97,11 +97,11 @@
       <DependentUpon>ucConfigurarBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\ConexaoSql.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs" />
     <Compile Include="FrmLogin.cs">
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="Controles\ucConfigurarBanco.resx">
       <DependentUpon>ucConfigurarBanco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
