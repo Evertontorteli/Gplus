@@ -1,13 +1,12 @@
-﻿using Gplus.Model;
+﻿using Gplus.Controles;
+using Gplus.Model;
 using System;
 using System.Windows.Forms;
 
 namespace Gplus
 {
-    public partial class Form1 : Form 
+    public partial class Form1 : Form
     {
-        ChildForm formularioConfigBanco;
-
         Banco banco10 = new Banco();
         Cliente cliente1 = new Cliente();
         Banco banco20 = new Banco();
@@ -19,51 +18,32 @@ namespace Gplus
             InitializeComponent();
         }
 
-        private void btnBanco1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
-        {
-            {
-                ChildForm child = new ChildForm() { TopLevel = false, TopMost = true };
+        private void btnBanco1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e) =>
+            AbrirConfiguracaoDeBanco();
 
-                child.FormBorderStyle = FormBorderStyle.None;
-                panel1.Controls.Add(child);
-                child.Anchor = (AnchorStyles.Bottom | AnchorStyles.Right);
-                child.Show();
-            }
-        }
-   
-        
-        private void btnBanco2_Click(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        private void AbrirConfiguracaoDeBanco()
         {
-            {
-                ChildForm child = new ChildForm() { TopLevel = false, TopMost = true };
-
-                child.FormBorderStyle = FormBorderStyle.None;
-                panel1.Controls.Add(child);
-                child.Show();
-            }
+            UserControl controle = new ucConfigurarBanco();
+            pnControles.Controls.Add(controle);
+            controle.Dock = DockStyle.Fill;
+            controle.Width = pnControles.Width;
+            controle.Height = pnControles.Height;
+            controle.Show();
         }
 
-        private void tileItem7_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
-        {
-            ChildForm child = new ChildForm() { TopLevel = false, TopMost = true };
+        private void btnBanco1_Click(object sender, EventArgs e) =>
+            AbrirConfiguracaoDeBanco();
 
-            child.FormBorderStyle = FormBorderStyle.None;
-            panel1.Controls.Add(child);
-            child.Show();
-        }
+        private void btnBanco2_Click(object sender, EventArgs e) =>
+            AbrirConfiguracaoDeBanco();
 
-        private void tileItem8_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
-        {
-            {
-                ChildForm child = new ChildForm() { TopLevel = false, TopMost = true };
+        private void btnBanco3_Click(object sender, EventArgs e) =>
+            AbrirConfiguracaoDeBanco();
 
-                child.FormBorderStyle = FormBorderStyle.None;
-                panel1.Controls.Add(child);
-                child.Show();
-            }
-        }
+        private void btnBanco4_Click(object sender, EventArgs e) =>
+            AbrirConfiguracaoDeBanco();
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void btnUsuario_Click(object sender, EventArgs e)
         {
             FrmLogin form = new FrmLogin();
 

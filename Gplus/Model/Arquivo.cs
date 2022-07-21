@@ -17,9 +17,7 @@ namespace Gplus.Model
         public Arquivo()
         {
 
-
         }
-
 
         public void SalvarArquivoCaminhoAlternativo()
         {
@@ -29,8 +27,6 @@ namespace Gplus.Model
             //mostrar a caixa de dialogo
             saveCaminho.ShowDialog();
             //this.caminhoAlternativoBackup = saveCaminho.SelectedPath;
-
-
         }
 
         public String CriarDiretorioPadraoBackup(string NomeBanco)
@@ -56,7 +52,6 @@ namespace Gplus.Model
             if (File.Exists(NomeBanco + "_FULL.BAK"))
             {
                 File.Delete(NomeBanco + "_FULL.BAK");
-
             }
 
             if (File.Exists(NomeBanco + "_DIF.BAK"))
@@ -91,25 +86,16 @@ namespace Gplus.Model
                     }
                     else
                     {
-                        
                         objBanco.TipoBackup = "_DIF";
                         Console.WriteLine("Já existe um Full de Hoje, irei fazer um DIF" + objBanco.NomeBanco);
-
                     }
-
                 }
-
             }
             else
             {
-
                 objBanco.TipoBackup = "_DIF";
                 Console.WriteLine("Já existe um Full de Hoje, irei fazer um DIF" + objBanco.NomeBanco);
-
-
             }
-
-
         }
 
         public async Task CompactarArquivoBackup(String CaminhoBackup, String NomeBanco, String TipoBackup)
@@ -128,7 +114,6 @@ namespace Gplus.Model
 
                 //vai pegar o banco no diretorio padrao da aplicacao;
                 compactador.AddFile(NomeBanco + TipoBackup + ".BAK");
-
 
                 compactador.Save(CaminhoBackup + "\\" + NomeBanco + TipoBackup + ".zip");
 

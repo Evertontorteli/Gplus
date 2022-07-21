@@ -4,22 +4,23 @@ using Gplus.Tarefas;
 using System;
 using System.Windows.Forms;
 
-namespace Gplus
+namespace Gplus.Controles
 {
-    public partial class ChildForm : Form
+    public partial class ucConfigurarBanco : UserControl
     {
+
         Cliente objCliente;
         Banco objBanco;
 
-        public ChildForm(object cliente, object banco)
-        { 
+        public ucConfigurarBanco(object cliente, object banco)
+        {
             InitializeComponent();
-           
+
             objCliente = (Cliente)cliente;
             objBanco = (Banco)banco;
         }
 
-        public ChildForm()
+        public ucConfigurarBanco()
         {
             InitializeComponent();
             objBanco = new Banco();
@@ -35,13 +36,10 @@ namespace Gplus
         }
 
 
-     
-
-
         public bool ValidarCamposPreenchidos()
         {
 
-            if (txtInstancia.Text == "" || txtLogin.Text == "" || txtSenha.Text == "" || txtEmail.Text == "" || txtEmailSenha.Text == "" || numTempoBackup.Value == 0 && (radioMega.Checked == false || radioGoogleDrive.Checked ==false) )
+            if (txtInstancia.Text == "" || txtLogin.Text == "" || txtSenha.Text == "" || txtEmail.Text == "" || txtEmailSenha.Text == "" || numTempoBackup.Value == 0 && (radioMega.Checked == false || radioGoogleDrive.Checked == false))
             {
                 return false;
             }
@@ -64,17 +62,17 @@ namespace Gplus
                 {
                     objCliente.ServicoUpload = radioGoogleDrive.Text;
                 }
-                
+
                 return true;
             }
 
-         
+
         }
 
 
         public void CarregarDadosCamposFormulario()
         {
-            if(objBanco.InstanciaBanco != null)
+            if (objBanco.InstanciaBanco != null)
             {
                 txtInstancia.Text = objBanco.InstanciaBanco;
                 txtLogin.Text = objBanco.LoginBanco;
@@ -88,27 +86,27 @@ namespace Gplus
                 if (objCliente.ServicoUpload == "Mega")
                 {
                     radioMega.Checked = true;
-                  
+
                 }
                 else
                 {
-                   radioGoogleDrive.Checked = true;
-      
+                    radioGoogleDrive.Checked = true;
+
                 }
             }
-            
-            
+
+
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+
+        private void btnSalvarConfigBanco_Click(object sender, EventArgs e)
         {
             if (ValidarCamposPreenchidos())
             {
                 //Job para relaizar backup
                 JobManager.Initialize(new AgendadordeTarefas(objBanco, objCliente, objBanco.HoraBackup));
 
-                this.Close();
-
+                Parent.Controls.Remove(this);
 
             }
             else
@@ -116,7 +114,5 @@ namespace Gplus
                 MessageBox.Show("Existe campos não preenchidos. Verifique e tente novamente.");
             }
         }
-
-       
     }
 }

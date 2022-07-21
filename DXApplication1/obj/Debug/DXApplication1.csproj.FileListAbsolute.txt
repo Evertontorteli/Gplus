@@ -1,0 +1,5 @@
+C:\Users\adria\source\repos\Gplus\DXApplication1\obj\Debug\DXApplication1.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\Gplus\DXApplication1\obj\Debug\DXApplication1.csproj.SuggestedBindingRedirects.cache
+C:\Users\adria\source\repos\Gplus\DXApplication1\obj\Debug\DXApplication1.Properties.Resources.resources
+C:\Users\adria\source\repos\Gplus\DXApplication1\obj\Debug\DXApplication1.csproj.GenerateResource.cache
+C:\Users\adria\source\repos\Gplus\DXApplication1\obj\Debug\DXApplication1.csproj.CoreCompileInputs.cache
