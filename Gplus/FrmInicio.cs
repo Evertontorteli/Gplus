@@ -51,5 +51,10 @@ namespace Gplus
             this.Hide();
             form.Show();
         }
+
+        private void pnControles_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
