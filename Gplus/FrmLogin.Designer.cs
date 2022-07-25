@@ -60,9 +60,10 @@
             this.pnlLogin.Controls.Add(this.labelUsuario);
             this.pnlLogin.Controls.Add(this.frmUsuario);
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Location = new System.Drawing.Point(359, 119);
+            this.pnlLogin.Location = new System.Drawing.Point(479, 146);
+            this.pnlLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(341, 422);
+            this.pnlLogin.Size = new System.Drawing.Size(455, 519);
             this.pnlLogin.TabIndex = 0;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
@@ -70,9 +71,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 201);
+            this.pictureBox1.Size = new System.Drawing.Size(403, 247);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -82,19 +84,21 @@
             this.frmSenha.BackColor = System.Drawing.Color.White;
             this.frmSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.frmSenha.Controls.Add(this.txtSenha);
-            this.frmSenha.Location = new System.Drawing.Point(20, 303);
+            this.frmSenha.Location = new System.Drawing.Point(27, 373);
+            this.frmSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.frmSenha.Name = "frmSenha";
-            this.frmSenha.Size = new System.Drawing.Size(303, 45);
+            this.frmSenha.Size = new System.Drawing.Size(403, 55);
             this.frmSenha.TabIndex = 5;
             // 
             // txtSenha
             // 
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(53, 12);
+            this.txtSenha.Location = new System.Drawing.Point(71, 15);
+            this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(247, 20);
+            this.txtSenha.Size = new System.Drawing.Size(329, 25);
             this.txtSenha.TabIndex = 2;
             // 
             // labelSenha
@@ -102,9 +106,10 @@
             this.labelSenha.AutoSize = true;
             this.labelSenha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSenha.Location = new System.Drawing.Point(17, 283);
+            this.labelSenha.Location = new System.Drawing.Point(23, 348);
+            this.labelSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(51, 17);
+            this.labelSenha.Size = new System.Drawing.Size(65, 23);
             this.labelSenha.TabIndex = 7;
             this.labelSenha.Text = "SENHA";
             // 
@@ -113,9 +118,10 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelUsuario.Location = new System.Drawing.Point(17, 213);
+            this.labelUsuario.Location = new System.Drawing.Point(23, 262);
+            this.labelUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(64, 17);
+            this.labelUsuario.Size = new System.Drawing.Size(83, 23);
             this.labelUsuario.TabIndex = 6;
             this.labelUsuario.Text = "USUÁRIO";
             // 
@@ -124,18 +130,20 @@
             this.frmUsuario.BackColor = System.Drawing.Color.White;
             this.frmUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.frmUsuario.Controls.Add(this.txtUsuario);
-            this.frmUsuario.Location = new System.Drawing.Point(20, 235);
+            this.frmUsuario.Location = new System.Drawing.Point(27, 289);
+            this.frmUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.frmUsuario.Name = "frmUsuario";
-            this.frmUsuario.Size = new System.Drawing.Size(303, 45);
+            this.frmUsuario.Size = new System.Drawing.Size(403, 55);
             this.frmUsuario.TabIndex = 4;
             // 
             // txtUsuario
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(53, 12);
+            this.txtUsuario.Location = new System.Drawing.Point(71, 15);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(247, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(329, 25);
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
@@ -149,9 +157,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnLogin.Location = new System.Drawing.Point(20, 370);
+            this.btnLogin.Location = new System.Drawing.Point(27, 455);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(303, 45);
+            this.btnLogin.Size = new System.Drawing.Size(404, 55);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "ENTRAR";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -165,9 +174,10 @@
             this.panelRodape.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelRodape.Controls.Add(this.pictureBox2);
             this.panelRodape.Controls.Add(this.labelRodape);
-            this.panelRodape.Location = new System.Drawing.Point(12, 632);
+            this.panelRodape.Location = new System.Drawing.Point(16, 778);
+            this.panelRodape.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRodape.Name = "panelRodape";
-            this.panelRodape.Size = new System.Drawing.Size(1040, 40);
+            this.panelRodape.Size = new System.Drawing.Size(1387, 49);
             this.panelRodape.TabIndex = 1;
             // 
             // pictureBox2
@@ -175,9 +185,10 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(999, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1332, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox2.Size = new System.Drawing.Size(51, 47);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
@@ -187,30 +198,32 @@
             this.labelRodape.AutoSize = true;
             this.labelRodape.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelRodape.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelRodape.Location = new System.Drawing.Point(13, 10);
+            this.labelRodape.Location = new System.Drawing.Point(17, 12);
+            this.labelRodape.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRodape.Name = "labelRodape";
-            this.labelRodape.Size = new System.Drawing.Size(164, 19);
+            this.labelRodape.Size = new System.Drawing.Size(200, 23);
             this.labelRodape.TabIndex = 9;
             this.labelRodape.Text = "2022 Precisão Sistemas®";
             this.labelRodape.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1419, 838);
             this.Controls.Add(this.panelRodape);
             this.Controls.Add(this.pnlLogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
             this.Resize += new System.EventHandler(this.FrmLogin_Resize);
