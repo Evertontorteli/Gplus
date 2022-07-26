@@ -63,7 +63,7 @@ namespace Gplus.Model
 
         public void IdentificarFullouDifBackup(object banco)
         {
-            Banco objBanco = (Banco)banco;
+            BancoModel objBanco = (BancoModel)banco;
 
             var dataHoje = DateTime.Today;
 

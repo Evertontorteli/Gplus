@@ -89,11 +89,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controler\ClienteController.cs" />
+    <Compile Include="Controler\ConfiguracaoBancoBackupController.cs" />
     <Compile Include="Controler\ContBancodeDados.cs" />
-    <Compile Include="Controles\ucConfigurarBanco.cs">
+    <Compile Include="Dao\ClienteDAO.cs" />
+    <Compile Include="Dao\ConfiguracaoBancoBackupDAO.cs" />
+    <Compile Include="View\ConfigurarBanco\ucConfigurarBanco.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controles\ucConfigurarBanco.Designer.cs">
+    <Compile Include="View\ConfigurarBanco\ucConfigurarBanco.Designer.cs">
       <DependentUpon>ucConfigurarBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Dao\ConexaoSql.cs" />
@@ -111,7 +115,7 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Arquivo.cs" />
-    <Compile Include="Model\Banco.cs" />
+    <Compile Include="Model\BancoModel.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Log.cs" />
     <Compile Include="Program.cs" />
@@ -122,7 +126,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Tarefas\AgendadordeTarefas.cs" />
-    <EmbeddedResource Include="Controles\ucConfigurarBanco.resx">
+    <Compile Include="View\ucTelaInicial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTelaInicial.Designer.cs">
+      <DependentUpon>ucTelaInicial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ConfigurarBanco\ucConfigurarBanco.resx">
       <DependentUpon>ucConfigurarBanco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
@@ -136,6 +146,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTelaInicial.resx">
+      <DependentUpon>ucTelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

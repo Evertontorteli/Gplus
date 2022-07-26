@@ -1,5 +1,7 @@
-﻿using Gplus.Controles;
+﻿using Gplus.Controler;
+using Gplus.Controles;
 using Gplus.Model;
+using Gplus.View;
 using System;
 using System.Windows.Forms;
 
@@ -7,54 +9,78 @@ namespace Gplus
 {
     public partial class FrmInicio : Form
     {
-        Banco banco10 = new Banco();
+        BancoModel banco10 = new BancoModel();
         Cliente cliente1 = new Cliente();
-        Banco banco20 = new Banco();
+        BancoModel banco20 = new BancoModel();
         Cliente cliente2 = new Cliente();
 
 
         public FrmInicio()
         {
             InitializeComponent();
+
+            AbrirTelaInicial();
         }
 
-        private void btnBanco1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e) =>
-            AbrirConfiguracaoDeBanco();
-
-        private void AbrirConfiguracaoDeBanco()
+        private void AbrirTelaInicial()
         {
-            UserControl controle = new ucConfigurarBanco();
+            var controle = new ucTelaInicial();
+            controle.Width = pnControles.Width;
+            controle.Height = pnControles.Height;
+            pnControles.Controls.Add(controle);
+        }
+
+        private void btnBanco1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        {
+            var banco = new ConfiguracaoBancoBackupController().ObterConfiguracaoBackup1();
+            var cliente = new Cliente();
+            AbrirConfiguracaoDeBanco(banco, cliente);
+        }
+
+        private void AbrirConfiguracaoDeBanco(BancoModel banco, Cliente cliente)
+        {
+            UserControl controle = new ucConfigurarBanco(banco, cliente);
             pnControles.Controls.Add(controle);
             controle.Dock = DockStyle.Fill;
             controle.Width = pnControles.Width;
             controle.Height = pnControles.Height;
             controle.Show();
+            controle.BringToFront();
         }
 
         private void btnBanco1_Click(object sender, EventArgs e) =>
-            AbrirConfiguracaoDeBanco();
+            AbrirConfiguracaoDeBanco(new BancoModel(), new Cliente());
 
         private void btnBanco2_Click(object sender, EventArgs e) =>
-            AbrirConfiguracaoDeBanco();
+            AbrirConfiguracaoDeBanco(new BancoModel(), new Cliente());
 
         private void btnBanco3_Click(object sender, EventArgs e) =>
-            AbrirConfiguracaoDeBanco();
+            AbrirConfiguracaoDeBanco(new BancoModel(), new Cliente());
 
         private void btnBanco4_Click(object sender, EventArgs e) =>
-            AbrirConfiguracaoDeBanco();
+            AbrirConfiguracaoDeBanco(new BancoModel(), new Cliente());
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             FrmLogin form = new FrmLogin();
 
-            //Fecha a tela de login e abre o de Menu
-            this.Hide();
+            Hide();
             form.Show();
         }
 
-        private void pnControles_Paint(object sender, PaintEventArgs e)
+        private void btnTelaInicial_Click(object sender, EventArgs e)
         {
+            RemoverControles();
+            AbrirTelaInicial();
+        }
 
+        private void RemoverControles()
+        {
+            pnControles.Controls.Clear();
+            btnBanco1.Checked = false;
+            btnBanco2.Checked = false;
+            btnBanco3.Checked = false;
+            btnBanco4.Checked = false;
         }
     }
 }

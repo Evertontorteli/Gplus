@@ -8,33 +8,37 @@ namespace Gplus.Controles
 {
     public partial class ucConfigurarBanco : UserControl
     {
-
         Cliente objCliente;
-        Banco objBanco;
+        BancoModel objBanco;
 
-        public ucConfigurarBanco(object cliente, object banco)
+        public ucConfigurarBanco(BancoModel banco, Cliente cliente)
         {
             InitializeComponent();
-
-            objCliente = (Cliente)cliente;
-            objBanco = (Banco)banco;
-        }
-
-        public ucConfigurarBanco()
-        {
-            InitializeComponent();
-            objBanco = new Banco();
+            objBanco = new BancoModel();
             objCliente = new Cliente();
 
+            if (banco.InstanciaBanco != null)  
+                PreencherCampos(banco, cliente);
         }
 
-        private void ConfigBanco_Load(object sender, System.EventArgs e)
+        private void PreencherCampos(BancoModel banco, Cliente cliente)
         {
+            txtInstancia.Text = banco.InstanciaBanco;
+            txtLogin.Text = banco.LoginBanco;
+            txtSenha.Text = banco.SenhaBanco;
 
-            CarregarDadosCamposFormulario();
+            txtNomeBanco.Text = banco.NomeBanco;
+            txtEmail.Text = cliente.EmailUpload;
+            txtEmailSenha.Text = cliente.SenhaUpload;
 
+            if (cliente.ServicoUpload == "Mega")
+                radioMega.Checked = true;
+            else if(cliente.ServicoUpload == "Google Drive")
+                radioGoogleDrive.Checked = true;
+
+            txtLocalSalvar.Text = banco.CaminhoSalvarBackup;
+            numTempoBackup.Value = banco.HoraBackup;
         }
-
 
         public bool ValidarCamposPreenchidos()
         {
@@ -65,37 +69,6 @@ namespace Gplus.Controles
 
                 return true;
             }
-
-
-        }
-
-
-        public void CarregarDadosCamposFormulario()
-        {
-            if (objBanco.InstanciaBanco != null)
-            {
-                txtInstancia.Text = objBanco.InstanciaBanco;
-                txtLogin.Text = objBanco.LoginBanco;
-                txtSenha.Text = objBanco.SenhaBanco;
-                txtNomeBanco.Text = objBanco.NomeBanco;
-                numTempoBackup.Value = objBanco.HoraBackup;
-
-                txtEmail.Text = objCliente.EmailUpload;
-                txtEmailSenha.Text = objCliente.SenhaUpload;
-
-                if (objCliente.ServicoUpload == "Mega")
-                {
-                    radioMega.Checked = true;
-
-                }
-                else
-                {
-                    radioGoogleDrive.Checked = true;
-
-                }
-            }
-
-
         }
 
 
@@ -107,12 +80,9 @@ namespace Gplus.Controles
                 JobManager.Initialize(new AgendadordeTarefas(objBanco, objCliente, objBanco.HoraBackup));
 
                 Parent.Controls.Remove(this);
-
             }
             else
-            {
                 MessageBox.Show("Existe campos não preenchidos. Verifique e tente novamente.");
-            }
         }
     }
 }

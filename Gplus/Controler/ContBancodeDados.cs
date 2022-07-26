@@ -10,11 +10,11 @@ namespace Gplus.Controler
     public class ContBancodeDados
     {
 
-        Banco objBanco;
+        BancoModel objBanco;
 
         public ContBancodeDados(Object banco,Object cliente)
         {
-            objBanco = (Banco)banco;
+            objBanco = (BancoModel)banco;
 
 
           Task.WaitAny(realizarBackupbancodeDados());

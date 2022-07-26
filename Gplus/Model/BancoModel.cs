@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Gplus.Model
 {
-    public class Banco
+    public class BancoModel
     {
         String instanciaBanco;
         String loginBanco;
@@ -17,9 +17,8 @@ namespace Gplus.Model
         String mensagemRetorno = "";
         String caminhoSalvarBackup;
         String tipoBackup;
-        public Banco()
+        public BancoModel()
         {
-
 
         }
 
@@ -34,14 +33,6 @@ namespace Gplus.Model
         public string MensagemRetorno { get => mensagemRetorno; set => mensagemRetorno = value; }
         public DateTime DataPrimeiroBackup { get => dataPrimeiroBackup; set => dataPrimeiroBackup = value; }
 
-
-
-
-
-
-
-
-
         public async Task FazerBackupBancodeDados(object ConexaoBanco,string CaminhoPadraoBackup,String TipoBackup)
         {
             ConexaoSql conexaoSql = (ConexaoSql)ConexaoBanco;
@@ -52,7 +43,6 @@ namespace Gplus.Model
             {
                 cmd.CommandText = "BACKUP DATABASE[" + NomeBanco + "] TO DISK = '" + CaminhoPadraoBackup + "\\" + NomeBanco + "_FULL.BAK'" +
                 " WITH NOINIT, NOUNLOAD, NOSKIP,STATS= 10, NOFORMAT"; ;
-
             }
             else
             {
@@ -68,7 +58,6 @@ namespace Gplus.Model
                 //cmd.ExecuteNonQueryAsync();
                
                 conexaoSql.desconectarBancoSQL();
-             
             }
             catch (SqlException ex)
             {
@@ -76,9 +65,5 @@ namespace Gplus.Model
                
             }
         }
-
-
-
     }
-
 }

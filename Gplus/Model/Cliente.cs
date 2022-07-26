@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gplus.Model
 {
@@ -14,7 +10,6 @@ namespace Gplus.Model
         String servicoUpload;
         String cnpj;
         String nomeFantasia;
-       
 
         public Cliente()
         {
@@ -26,7 +21,5 @@ namespace Gplus.Model
         public string ServicoUpload { get => servicoUpload; set => servicoUpload = value; }
         public string Cnpj { get => cnpj; set => cnpj = value; }
         public string NomeFantasia { get => nomeFantasia; set => nomeFantasia = value; }
-   
-    
     }
 }
