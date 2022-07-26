@@ -27,6 +27,7 @@ namespace Gplus
             var controle = new ucTelaInicial();
             controle.Width = pnControles.Width;
             controle.Height = pnControles.Height;
+            controle.Dock = DockStyle.Fill;
             pnControles.Controls.Add(controle);
         }
 
